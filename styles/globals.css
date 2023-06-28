@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'typeface-inter';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.scroll {
+  scroll-behavior: smooth;
+}
+
+.svg-link{
+  @apply fill-slate-400 h-6 w-6 hover:fill-white;
+
+}
+.nav-line{
+  @apply rounded-full  py-0.5 max-h-0.5 transition-all duration-200 ease-in-out;
+}
+
+.nav-text{
+  @apply rounded-full bg-slate-400 py-0.5 w-4 max-h-0.5 transition-all duration-200 ease-in-out;
+}
+
+.user-card{
+  @apply shadow-lg rounded-lg flex  lg:flex-row h-fit w-full 2xl:w-2/3 hover:bg-slate-800/50 hover:shadow-slate-500;
+}
+.mobile-nav{
+  @apply lg:sr-only tracking-wide  text-sm sticky top-0 uppercase mb-2 py-4 text-white font-bold bg-slate-900/75 backdrop-blur-md ;
+}
+
+.link{
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+
+}
+.main-app{
+  background-color: aquamarine;
+   background-image: url("/assets/images/grid.svg");
+     width: 100%;
+    height: 100%;
+      z-index: 1;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* css resets */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
