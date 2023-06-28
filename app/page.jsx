@@ -6,18 +6,16 @@ import Credits from "@components/Credits";
 import About from "@components/About";
 import Links from "@components/Links";
 
-export const getJsonData = async (fileName) => {
-  const res = await fetch(`http://localhost:3000/api?file=${fileName}`);
-  const repo = await res.json()
-  return repo;
-}
+import projectJSON from "./projects.json"
+import profileJSON from "./profile.json"
+import experienceJSON from "./experience.json"
+
 
 export default async function Home()
   {
-    const profile = await  getJsonData("profile")
-    const experienceData =  getJsonData("experience")
-    const projectData =  getJsonData("projects")
-    const [ experiences,projects] = await Promise.all([experienceData,projectData])
+    const projects=projectJSON
+    const profile=profileJSON
+    const experiences = experienceJSON
 
     return(
       <div id="main-page" className="grid grid-rows-2 px-4 overflow-auto h-full w-full lg:grid-cols-2 lg:gap-4">
@@ -25,7 +23,7 @@ export default async function Home()
         <div className="min-h-fit z-50 flex flex-col h-fit pt-10  lg:max-h-screen lg:pl-20  lg:pt-20  lg:h-screen lg:sticky lg:top-0  ">
           
           <span className="2xl:w-2/3 2xl:self-end">
-          < ProfileCard user={profile}></ProfileCard>
+          < ProfileCard user={profile} ></ProfileCard>
           </span>
           <span className="2xl:w-2/3 2xl:self-end lg:mt-10 sr-only lg:not-sr-only">
           <Navigation/>

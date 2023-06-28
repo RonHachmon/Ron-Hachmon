@@ -61,35 +61,44 @@ const Navigation = () => {
   }
   const elementVisibile = (element) => {
     const foundElement = document.getElementById(element);
-    const elementRect = foundElement.getBoundingClientRect();
-    if(elementRect.top>0)
+    if(foundElement)
     {
-      return true;
+      const elementRect = foundElement.getBoundingClientRect();
+      if(elementRect.top>0)
+      {
+        return true;
+      }
     }
-
     return false;
   }
   const elementCloseToTop= (element) => {
     const windowHeight = window.innerHeight;
     const foundElement = document.getElementById(element);
-    const elementRect = foundElement.getBoundingClientRect();
-    const topThreshold = windowHeight*0.30; // Adjust this threshold as needed
+    if(foundElement)
+    {
+      const elementRect = foundElement.getBoundingClientRect();
+      const topThreshold = windowHeight*0.30; // Adjust this threshold as needed
 
-  
-    const elementTopPosition = elementRect.top;
-  
-    const isCloseToTop = elementTopPosition <= topThreshold;
-  
-    return isCloseToTop && elementRect.top>0;
+    
+      const elementTopPosition = elementRect.top;
+    
+      const isCloseToTop = elementTopPosition <= topThreshold;
+    
+      return isCloseToTop && elementRect.top>0;
+    }
+    return false
   }
   const elementCloseToMiddle = (element) => {
     const windowHeight = window.innerHeight/2;
     const foundElement = document.getElementById(element);
-    const elementRect = foundElement.getBoundingClientRect();
-    console.log(element +" "+elementRect.top +" windown middle "+ windowHeight )
-    if(elementRect.top>0 && (windowHeight-elementRect.top)<RANGE_FROM_MIDDLE)
+    if(foundElement)
     {
-      return true;
+      const elementRect = foundElement.getBoundingClientRect();
+      console.log(element +" "+elementRect.top +" windown middle "+ windowHeight )
+      if(elementRect.top>0 && (windowHeight-elementRect.top)<RANGE_FROM_MIDDLE)
+      {
+        return true;
+      }
     }
 
     return false;
@@ -97,18 +106,21 @@ const Navigation = () => {
 
     const scrollToLink = (targetId) => {
       const targetElement = document.getElementById(targetId);
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      if(targetId==='about-ID')
+      if(targetElement)
       {
-        setAboutActive()
-      }
-      if(targetId==='experience-ID')
-      {
-        setExperienceActive()
-      }
-      if(targetId==='project-ID')
-      {
-        setProjectActive()
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        if(targetId==='about-ID')
+        {
+          setAboutActive()
+        }
+        if(targetId==='experience-ID')
+        {
+          setExperienceActive()
+        }
+        if(targetId==='project-ID')
+        {
+          setProjectActive()
+        }
       }
     };
   

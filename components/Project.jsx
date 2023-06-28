@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from 'next/link';
+export const getJsonData = async (fileName) => {
+    const res = await fetch(`http://127.0.0.1:3000/api?file=${fileName}`);
+    const repo = await res.json()
+    return repo;
+}
+
 const Project = (props) => {
     const project = props.project
     return (

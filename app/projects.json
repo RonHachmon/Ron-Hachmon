@@ -1,0 +1,80 @@
+[
+    {
+        "title": "Let's Meet",
+        "description": "Web app platform that help users to schedule meetings with others based on most avaliable date, and centralize related information to those meetings such as files, location, and participants.",
+        "image":"/assets/images/Projects/Lets meet.jpg",
+        "githubLink":"https://github.com/RonHachmon/Lets-Meet",
+        "technologies": [
+          {
+            "name": "Python",
+            "logo": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+          },
+          {
+            "name": "Django",
+            "logo": "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
+          },
+          {
+            "name": "MySQL",
+            "logo": "https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
+          },
+          {
+            "name": "Pytest",
+            "logo": "https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"
+          }
+        ]
+    },
+    {
+        "title": "Enigma Machine",
+        "description": "Developed a client-server desktop application using Tomcat, implementing the Enigma machine. Created a contest where clients compete to decrypt encoded messages. Leveraged Java for server-side logic and JavaFX for intuitive client apps",
+        "image":"/assets/images/Projects/Enigma.jpg",
+        "githubLink":"https://github.com/RonHachmon/Enigma-Machine",
+        "technologies": [
+          {
+            "name": "Java",
+            "logo": "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+          },
+          {
+            "name": "JavaFX ",
+            "logo": null
+          },
+          {
+            "name": "Apache Tomcat ",
+            "logo": null
+          }
+        ]
+    },
+    {
+      "title": "Desktop Facebook",
+      "description": "Designed and developed a Facebook desktop application by leveraging the Facebook API. The primary focus was on implementing various design patterns, including Singleton, Strategy, Adapter, Iterator, and more, to enhance the application's architecture and functionality.",
+      "image":"/assets/images/Projects/facebook.png",
+      "githubLink":"https://github.com/RonHachmon/Facebook-desktop-app",
+      "technologies": [
+        {
+          "name": "C#",
+          "logo": "https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"
+        },
+        {
+          "name": ".NET ",
+          "logo": "https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"
+        }
+      ]
+  },
+    {
+        "title": "Bull Detection",
+        "description": "This project demonstrates how to use transfer learning to train an SSD (Single Shot Detector) model to detect bulls in images.",
+        "image":"/assets/images/Projects/Bulls project.jpg",
+        "githubLink":"https://github.com/RonHachmon/Transfer-Learing-SSD-model",
+        "technologies": [
+          {
+            "name": "Python",
+            "logo": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+          },
+          {
+            "name": "Pytorch",
+            "logo": "https://img.shields.io/badge/Pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"
+          }
+        ]
+    }
+      
+]
+  
