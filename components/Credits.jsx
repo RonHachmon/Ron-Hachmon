@@ -1,6 +1,6 @@
 const Credits = () => {
     return (
-      <footer className="max-w-md pb-16 text-sm mt-4 text-slate-500 sm:pb-0 ">
+      <footer className="max-w-md text-sm mt-4 text-slate-500 px-2 ">
                 <p>Loosely designed in 
                     <a href="https://www.figma.com/" class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer"> Figma </a> 
                  and coded in 

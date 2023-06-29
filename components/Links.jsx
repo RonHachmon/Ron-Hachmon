@@ -1,7 +1,7 @@
 const Links = (props) => {
     const links = props.links
     return (
-        <div className=" mt-auto flex flex-row space-x-5 w-fit mx-2  mb-8 lg:mb-24    ">
+        <div className=" mt-auto flex flex-row space-x-5 w-fit mx-2       ">
           {links.map((link, index) => (
             <div key={index}>
               <a href={link.href} target="_blank" rel="noopener noreferrer">
