@@ -19,9 +19,9 @@ const RootLayout = ({ children }) => (
         <head>
           <link rel='icon' href='/logo.svg'/>
       </head>
-    <body className="h-full border-5 overflow-auto ">
-      <div className="main-app">
-        <Spotlight className=" h-full w-full">
+    <body className="h-full w-screen border-5 overflow-auto ">
+      <div className="h-full w-screen ">
+        <Spotlight className=" h-full w-screen">
         <SpotlightCard>
           {children}
         </SpotlightCard>
