@@ -18,7 +18,7 @@ export default async function Home()
     const experiences = experienceJSON
 
     return(
-      <div id="main-page" className="testing overflow-x-hidden md:overflow-x-scroll border-green-600 h-full w-screen grid grid-rows-2  overflow-auto md:w-full lg:px-4 lg:grid-cols-2 lg:gap-4">
+      <div id="main-page" className="testing overflow-x-hidden md:overflow-x-scroll border-green-600 h-full w-screen lg:grid grid-rows-2  overflow-auto md:w-full lg:px-4 lg:grid-cols-2 lg:gap-4">
 
         <div className=" testing w-screen border-yellow-600 lg:w-full  z-50 flex flex-col h-fit pt-10  lg:max-h-screen lg:pl-20  lg:pt-20  lg:h-screen lg:sticky lg:top-0  ">
           
@@ -34,7 +34,7 @@ export default async function Home()
           </span>
         </div>
         
-        <div className="testing border-red-600 w-screen min-h-fit lg:w-full z-10 mb-20 flex flex-col scroll-smooth snap-start">
+        <div className="testing border-red-600 w-screen min-h-fit lg:w-full  mb-20 flex flex-col scroll-smooth snap-start ">
           <span id="about-ID" className="lg:pt-20"></span>
           <content className="lg:w-full" >
             <div class="mobile-nav z-40 testing ">about</div> 
