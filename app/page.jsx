@@ -6,9 +6,9 @@ import Credits from "@components/Credits";
 import About from "@components/About";
 import Links from "@components/Links";
 
-import projectJSON from "./projects.json"
-import profileJSON from "./profile.json"
-import experienceJSON from "./experience.json"
+import projectJSON from "./json/projects.json"
+import profileJSON from "./json/profile.json"
+import experienceJSON from "./json/experience.json"
 
 
 export default async function Home()
