@@ -1,4 +1,18 @@
 [
+  {
+    "duration": "2024 — Present",
+    "lastPosition": "Full Stack Developer Internship · Offisito",
+    "positions": [ ],
+    "responsibilities": "Internship for a web application managing the rental of office space",
+    "technologies": [ ]
+  },
+  {
+    "duration": "2022 — 2022",
+    "lastPosition": "Software Developer Internship · Red Hat",
+    "positions": [ ],
+    "responsibilities": "Development from end to end of a web app platform that helps users schedule meetings with others based on the most available date.",
+    "technologies": [ ]
+  },
     {
       "duration": "2018 — 2020",
       "lastPosition": "Order manager expert · Checkpoint",
@@ -6,15 +20,8 @@
         "Order manager intermediate",
         "Order manager"
       ],
-      "responsibilities": "In charge of integration of purchase order into company system guidelines and shipment protocols.",
+      "responsibilities": "In charge of integration of purchase orders into company system guidelines and shipment protocols.",
       "technologies": []
-    },
-    {
-        "duration": "2014 — 2017",
-        "lastPosition": "System administrator · IDF",
-        "positions": [ ],
-        "responsibilities": "Held a position at the Israeli Civil Administration as an autonomous system administrator, overseeing all technological equipment and providing technical support.",
-        "technologies": [ ]
-      }
+    }
 ]
   

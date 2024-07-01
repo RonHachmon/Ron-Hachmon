@@ -31,7 +31,7 @@ const Project = (props) => {
             </Link>
 
        
-                <div className="mt-2 lg:max-w-xs text-slate-400">
+                <div className="mt-2 max-w-md text-slate-400">
                     {project?.description}
                 </div>
 
