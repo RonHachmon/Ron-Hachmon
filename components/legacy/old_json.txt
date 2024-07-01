@@ -1,0 +1,24 @@
+    {
+        "title": "Let's Meet",
+        "description": "Web app platform that help users to schedule meetings with others based on most avaliable date, and centralize related information to those meetings such as files, location, and participants.",
+        "image":"/assets/images/Projects/Lets meet.jpg",
+        "githubLink":"https://github.com/RonHachmon/Lets-Meet",
+        "technologies": [
+          {
+            "name": "Python",
+            "logo": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+          },
+          {
+            "name": "Django",
+            "logo": "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
+          },
+          {
+            "name": "MySQL",
+            "logo": "https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
+          },
+          {
+            "name": "Pytest",
+            "logo": "https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"
+          }
+        ]
+    },

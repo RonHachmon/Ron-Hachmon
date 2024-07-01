@@ -2,7 +2,7 @@ const Experience = (props) => {
     const experience = props.experience
     return (
         <div className="group user-card flex-col w-full my-2 ">
-            <div className="text-gray-400 text-md pl-2 pt-3 w-40 lg:text-center  ">
+            <div className="text-gray-400 text-md pl-2 pt-3 w-44 lg:text-center  ">
                 {experience?.duration}
             </div>
             <div className=" flex flex-col text-sm text-gray-100 pl-2  w-full   ">
