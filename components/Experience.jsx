@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Technologies from './Technologies';
 const Experience = (props) => {
     const experience = props.experience
     return (
@@ -23,13 +24,8 @@ const Experience = (props) => {
                     {experience.responsibilities}
                 </div>
 
-                {/* in case there were software involved */}
-                <div className=" flex flex-wrap space-x-2  my-2 max-w-md  border-slate-100">
-                    {experience?.technologies.map((tech, index) => (
-                                <div id={index} className="text-center mb-2 py-1 text-sm px-3 w-fit h-fit rounded-full bg-teal-400/10 text-teal-300" >{tech}</div>
-                        ))}
-                </div>
 
+                <Technologies technologies={experience.technologies} />
             </div>
       </div>
     );
