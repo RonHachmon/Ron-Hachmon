@@ -5,7 +5,32 @@
     "positions": [ ],
     "link": "https://www.offisito.com/",
     "responsibilities": "Internship for a web application managing the rental of office space",
-    "technologies": ["TypeScript","MongoDB","React","Express","NodeJS","MUI" ]
+    "technologies": [
+      {
+        "name": "TypeScript",
+        "logo": "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+      },
+      {
+        "name": "React",
+        "logo": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+      },
+      {
+        "name": "NodeJS",
+        "logo": "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
+      },
+      {
+        "name": "Express",
+        "logo": "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=Express&logoColor=white"
+      },
+      {
+        "name": "MUI",
+        "logo": "https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white"
+      }
+    ]
   },
   {
     "duration": "2022 — 2022",
@@ -13,7 +38,24 @@
     "positions": [ ],
     "link": "https://github.com/RonHachmon/Lets-Meet",
     "responsibilities": "Development from end to end of a web app platform that helps users schedule meetings with others based on the most available date.",
-    "technologies": ["Python","Django","MySQL","Pytest"]
+    "technologies": [
+      {
+        "name": "Python",
+        "logo": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+      },
+      {
+        "name": "Django",
+        "logo": "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
+      },
+      {
+        "name": "MySQL",
+        "logo": "https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
+      },
+      {
+        "name": "Pytest",
+        "logo": "https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white"
+      }
+    ]
   },
     {
       "duration": "2018 — 2020",
