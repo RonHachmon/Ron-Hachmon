@@ -20,6 +20,34 @@
         ]
     },
     {
+      "title": "Cut it Out",
+      "description": "A web application that uses an AI model to separate the image's main subject from its background, the app utilizes Docker AWS and GitHub actions to automate the deployment process.",
+      "image":"/assets/images/Projects/Cut it Out.jpg",
+      "githubLink":"https://github.com/RonHachmon/Cut-it-Out",
+      "technologies": [
+        {
+          "name": "TypeScript",
+          "logo": "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
+        },
+        {
+          "name": "React",
+          "logo": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+        },
+        {
+          "name": "NodeJS",
+          "logo": "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+        },
+        {
+          "name": "Docker",
+          "logo": "https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"
+        },
+        {
+          "name": "AWS ",
+          "logo": null
+        }
+      ]
+  },
+    {
       "title": "Desktop Facebook",
       "description": "Designed and developed a Facebook desktop application by utilizing the Facebook API. The main focus was to implement various design patterns, including Singleton, Strategy, Adapter, Iterator, and more, in order to enhance the application's architecture and functionality.",
       "image":"/assets/images/Projects/facebook.png",

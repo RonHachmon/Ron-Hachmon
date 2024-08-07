@@ -3,15 +3,17 @@
     "duration": "2024 — Present",
     "lastPosition": "Full Stack Developer Internship · Offisito",
     "positions": [ ],
+    "link": "https://www.offisito.com/",
     "responsibilities": "Internship for a web application managing the rental of office space",
-    "technologies": [ ]
+    "technologies": ["TypeScript","MongoDB","React","Express","NodeJS","MUI" ]
   },
   {
     "duration": "2022 — 2022",
     "lastPosition": "Software Developer Internship · Red Hat",
     "positions": [ ],
+    "link": "https://github.com/RonHachmon/Lets-Meet",
     "responsibilities": "Development from end to end of a web app platform that helps users schedule meetings with others based on the most available date.",
-    "technologies": [ ]
+    "technologies": ["Python","Django","MySQL","Pytest"]
   },
     {
       "duration": "2018 — 2020",
@@ -20,6 +22,7 @@
         "Order manager intermediate",
         "Order manager"
       ],
+      "link": "https://www.checkpoint.com/",
       "responsibilities": "In charge of integration of purchase orders into company system guidelines and shipment protocols.",
       "technologies": []
     }
