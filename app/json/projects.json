@@ -50,7 +50,7 @@
     {
       "title": "Desktop Facebook",
       "description": "Designed and developed a Facebook desktop application by utilizing the Facebook API. The main focus was to implement various design patterns, including Singleton, Strategy, Adapter, Iterator, and more, in order to enhance the application's architecture and functionality.",
-      "image":"/assets/images/Projects/facebook.png",
+      "image":"/assets/images/Projects/facebook.jpg",
       "githubLink":"https://github.com/RonHachmon/Facebook-desktop-app",
       "technologies": [
         {

@@ -10,7 +10,7 @@ export const getJsonData = async (fileName) => {
 const Project = (props) => {
     const project = props.project
     return (
-        <div className=" -z-10 group user-card flex-col-reverse my-2 w-full ">
+        <div className=" -z-10 group user-card flex-col-reverse my-2 w-full   ">
             <div className="w-96 lg:w-40 p-2">
             <Image
                 src={project?.image}
