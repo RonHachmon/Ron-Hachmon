@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 import Spotlight from "@components/Spotlight";
 import { SpotlightCard } from "@components/Spotlight";
+import Analytics from "@components/Analytics";
 import { Inter } from 'next/font/google'
 
 
@@ -20,6 +21,7 @@ const RootLayout = ({ children }) => (
           <link rel='icon' href='/logo.svg'/>
       </head>
     <body className="h-full w-screen border-5 overflow-auto ">
+      <Analytics /> {/* Add the Analytics component here */}
       <div className="h-full w-screen ">
         <Spotlight className=" h-full w-screen">
         <SpotlightCard>
