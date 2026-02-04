@@ -2,7 +2,7 @@ const About = () => {
     return (
       <div className="w-full 2xl:w-2/3 text-lg text-slate-400  px-2  ">
         <p>
-        <span className="text-white">Hi</span> <span className="text-white">there!</span> I'm <span className="text-white">an experienced software developer </span>with <span className="text-white">a deep passion for coding.</span>
+        <span className="text-white">Hi there!</span> I'm <span className="text-white">an experienced software developer </span>with <span className="text-white">a deep passion for coding.</span>
         <br />
         <br />
         I find <span className="text-white">joy</span> in <span className="text-white">crafting elegant solutions</span> to <span className="text-white">complex problems </span>
@@ -24,5 +24,5 @@ const About = () => {
     );
   };
   
-  export default About;
+  export default About; 
   

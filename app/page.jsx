@@ -13,8 +13,8 @@ import experienceJSON from "./json/experience.json"
 
 export default async function Home()
   {
-    const projects=projectJSON
-    const profile=profileJSON
+    const projects = projectJSON
+    const profile = profileJSON
     const experiences = experienceJSON
 
     return(
