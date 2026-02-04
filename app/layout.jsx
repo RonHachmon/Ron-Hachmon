@@ -6,9 +6,39 @@ import { Inter } from 'next/font/google'
 
 
 export const metadata = {
-  title: "Ron Hachmon",
-  description: "best potfolio maybe ever",
+  metadataBase: new URL('https://ron-hachmon.vercel.app'),
+  title: "Ron Hachmon | Software Developer",
+  description: "Software developer portfolio showcasing projects and experience in full-stack development, React, Next.js, and modern web technologies.",
+  keywords: ["Ron Hachmon", "Software Developer", "Full Stack Developer", "React", "Next.js", "Portfolio"],
+  authors: [{ name: "Ron Hachmon" }],
+  creator: "Ron Hachmon",
+  publisher: "Ron Hachmon",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ron-hachmon.vercel.app',
+    title: 'Ron Hachmon | Software Developer',
+    description: 'Software developer portfolio showcasing projects and experience in full-stack development.',
+    siteName: 'Ron Hachmon Portfolio',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ron Hachmon | Software Developer',
+    description: 'Software developer portfolio showcasing projects and experience in full-stack development.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+export const viewport = {
+  themeColor: '#0f172a',
+};
+
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
   subsets: ['latin'],

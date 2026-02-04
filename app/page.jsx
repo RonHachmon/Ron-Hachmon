@@ -13,8 +13,8 @@ import experienceJSON from "./json/experience.json"
 
 export default async function Home()
   {
-    const projects=projectJSON
-    const profile=profileJSON
+    const projects = projectJSON
+    const profile = profileJSON
     const experiences = experienceJSON
 
     return(
@@ -36,30 +36,30 @@ export default async function Home()
         
         <div className="testing border-red-600 min-h-fit lg:w-full  mb-20 flex flex-col scroll-smooth snap-start  ">
           <span id="about-ID" className="lg:pt-20"></span>
-          <content className="lg:w-full" >
-            <div class="mobile-nav z-40 testing ">about</div> 
+          <section className="lg:w-full" >
+            <h2 className="mobile-nav z-40 testing ">about</h2>
             <About></About>
-          </content>
+          </section>
 
-      
-          <content className="mt-10 space-y-8 "  id="experience-ID">
-            <div class="mobile-nav z-40 testing ">experience</div>
+
+          <section className="mt-10 space-y-8 "  id="experience-ID">
+            <h2 className="mobile-nav z-40 testing ">experience</h2>
             {experiences?.map((experience, index) => (
-                        <Experience id={index} experience={experience}/>
+                        <Experience key={index} id={index} experience={experience}/>
 
             ))}
-          </content>
-        
-          <content className="mt-10 space-y-8 lg:mb-20 mb-8  " id="project-ID">
-              <div class="mobile-nav z-40 testing">projects</div>
+          </section>
+
+          <section className="mt-10 space-y-8 lg:mb-20 mb-8  " id="project-ID">
+              <h2 className="mobile-nav z-40 testing">projects</h2>
               {projects?.map((project, index) => (
-                          <Project id={index} project={project}/>
+                          <Project key={index} id={index} project={project}/>
 
               ))}
             <span className="mt-5"/>
             <Credits/>
             <span className="p-16"/>
-          </content>
+          </section>
       </div>
     </div>
 
