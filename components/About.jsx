@@ -1,28 +1,31 @@
 const About = () => {
     return (
-      <div className="w-full 2xl:w-2/3 text-lg text-slate-400  px-2  ">
-        <p>
-        <span className="text-white">Hi there!</span> I&apos;m <span className="text-white">an experienced software developer </span>with <span className="text-white">a deep passion for coding.</span>
-        <br />
-        <br />
-        I find <span className="text-white">joy</span> in <span className="text-white">crafting elegant solutions</span> to <span className="text-white">complex problems </span>
-         and constantly expanding my knowledge in the <span className="text-white">ever-evolving world</span> of <span className="text-white">technology</span>.
-        <br />
-        <br />
-        When I&apos;m not immersed in lines of code, you&apos;ll likely find me in the kitchen,
-        <span className="text-white"> experimenting</span> with new <span className="text-white">baking recipes</span> and creating <span className="text-white">delicious treats.</span>
-        <br />
-        I also have <span className="text-white">a strong</span> <span className="text-white">wanderlust</span>, as exploring new places and experiencing diverse cultures excites and inspires me.
-        <br />
-        <br />
-        As I embark on this exciting journey as <span className="text-white">a software developer</span>,
-        I&apos;m eager to combine my love for coding with my <span className="text-white">creativity</span>,
-        <span className="text-white"> curiosity</span>, and <span className="text-white">zest of life.</span>
+      <div className="w-full 2xl:w-2/3 px-2 space-y-5">
+        <p className="text-lg text-slate-300 leading-relaxed">
+          <span className="text-white font-medium">Hi there!</span> I&apos;m an experienced software developer
+          with a deep passion for coding.
         </p>
 
+        <p className="text-slate-400 leading-relaxed">
+          I find joy in <em className="text-slate-200 not-italic font-medium">crafting elegant solutions</em> to
+          complex problems and constantly expanding my knowledge in the ever-evolving world of technology.
+        </p>
+
+        <p className="text-slate-400 leading-relaxed">
+          When I&apos;m not immersed in lines of code, you&apos;ll likely find me in the kitchen,
+          experimenting with new baking recipes and creating delicious treats.
+          I also have a strong <em className="text-slate-200 not-italic font-medium">wanderlust</em> — exploring
+          new places and experiencing diverse cultures excites and inspires me.
+        </p>
+
+        <p className="text-slate-400 leading-relaxed">
+          As I embark on this exciting journey as a software developer, I&apos;m eager to combine
+          my love for coding with my <span className="text-slate-200">creativity</span>,
+          <span className="text-slate-200"> curiosity</span>, and <span className="text-slate-200">zest for life</span>.
+        </p>
       </div>
     );
   };
-  
+
   export default About; 
   

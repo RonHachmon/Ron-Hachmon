@@ -2,7 +2,7 @@ import "@styles/globals.css";
 import Spotlight from "@components/Spotlight";
 import { SpotlightCard } from "@components/Spotlight";
 import Analytics from "@components/Analytics";
-import { Inter } from 'next/font/google'
+import { Inter, Outfit, Source_Sans_3 } from 'next/font/google'
 
 
 export const metadata = {
@@ -39,18 +39,34 @@ export const viewport = {
   themeColor: '#0f172a',
 };
 
-// If loading a variable font, you don't need to specify the font weight
+// Font options - switch between these by changing the className on html element
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-inter',
 })
 
+// Modern geometric sans - distinctive headings with personality
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+})
+
+// Clean readable body text
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-sans',
+})
+
+// Switch fonts: inter.className (original) OR `${outfit.variable} ${sourceSans.variable} font-sans` (new)
 const RootLayout = ({ children }) => (
-  <html lang='en' id="app-U" className={inter.className}>
+  <html lang='en' id="app-U" className={`${outfit.variable} ${sourceSans.variable} font-sans`}>
         <head>
           <link rel='icon' href='/logo.svg'/>
       </head>
-    <body className="h-full w-screen border-5 overflow-auto ">
+    <body className="h-full w-screen overflow-auto">
       <Analytics /> {/* Add the Analytics component here */}
       <div className="h-full w-screen ">
         <Spotlight className=" h-full w-screen">

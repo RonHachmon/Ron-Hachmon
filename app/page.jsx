@@ -18,32 +18,32 @@ export default async function Home()
     const experiences = experienceJSON
 
     return(
-      <div id="main-page" className="lg:mx-0 mx-7 testing overflow-x-hidden md:overflow-x-scroll border-green-600 h-full  lg:grid grid-rows-2  overflow-auto md:w-full lg:px-4 lg:grid-cols-2 lg:gap-4">
+      <div id="main-page" className="lg:mx-0 mx-7 overflow-x-hidden md:overflow-x-scroll h-full lg:grid grid-rows-2 overflow-auto md:w-full lg:px-4 lg:grid-cols-2 lg:gap-4">
 
-        <div className=" testing  border-yellow-600 lg:w-full  z-50 flex flex-col h-fit pt-10  lg:max-h-screen lg:pl-20  lg:pt-20  lg:h-screen lg:sticky lg:top-0  ">
+        <div className="lg:w-full z-50 flex flex-col h-fit pt-10 lg:max-h-screen lg:pl-20 lg:pt-20 lg:h-screen lg:sticky lg:top-0">
           
-          <span className=" 2xl:w-2/3 2xl:self-end">
-          < ProfileCard user={profile} ></ProfileCard>
+          <span className="2xl:w-2/3 2xl:self-end animate-on-load animate-fade-in-up">
+            <ProfileCard user={profile} />
           </span>
-          <span className="2xl:w-2/3 2xl:self-end lg:mt-10 sr-only lg:not-sr-only">
-          <Navigation/>
+          <span className="2xl:w-2/3 2xl:self-end lg:mt-10 sr-only lg:not-sr-only animate-on-load animate-slide-in-left delay-200">
+            <Navigation />
           </span>
 
-          <span className="flex 2xl:w-2/3 2xl:self-end mt-10 lg:h-full lg:mb-20 mb-8 ">
-          <Links links={profile.links}/>
+          <span className="flex 2xl:w-2/3 2xl:self-end mt-10 lg:h-full lg:mb-20 mb-8 animate-on-load animate-fade-in delay-400">
+            <Links links={profile.links} />
           </span>
         </div>
         
-        <div className="testing border-red-600 min-h-fit lg:w-full  mb-20 flex flex-col scroll-smooth snap-start  ">
+        <div className="min-h-fit lg:w-full mb-20 flex flex-col scroll-smooth snap-start">
           <span id="about-ID" className="lg:pt-20"></span>
           <section className="lg:w-full" >
-            <h2 className="mobile-nav z-40 testing ">about</h2>
+            <h2 className="mobile-nav z-40">about</h2>
             <About></About>
           </section>
 
 
           <section className="mt-10 space-y-8 "  id="experience-ID">
-            <h2 className="mobile-nav z-40 testing ">experience</h2>
+            <h2 className="mobile-nav z-40">experience</h2>
             {experiences?.map((experience, index) => (
                         <Experience key={index} id={index} experience={experience}/>
 
@@ -51,7 +51,7 @@ export default async function Home()
           </section>
 
           <section className="mt-10 space-y-8 lg:mb-20 mb-8  " id="project-ID">
-              <h2 className="mobile-nav z-40 testing">projects</h2>
+              <h2 className="mobile-nav z-40">projects</h2>
               {projects?.map((project, index) => (
                           <Project key={index} id={index} project={project}/>
 
