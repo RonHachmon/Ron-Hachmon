@@ -1,10 +1,10 @@
 [
   {
-    "duration": "2024 — Present",
+    "duration": "2024 — 2025",
     "lastPosition": "Full Stack Developer Intern · Offisito",
     "positions": [ ],
     "link": "https://www.offisito.com/",
-    "responsibilities": "Internship for a web application managing the rental of office space",
+    "responsibilities": "Contributed to a full-stack platform for managing office space rentals, working across the React frontend and Node.js backend to build and improve core product features.",
     "technologies": [
       {
         "name": "TypeScript",
@@ -37,7 +37,7 @@
     "lastPosition": "Software Developer Intern · Red Hat",
     "positions": [ ],
     "link": "https://github.com/RonHachmon/Lets-Meet",
-    "responsibilities": "Development from end to end of a web app platform that helps users schedule meetings with others based on the most available date.",
+    "responsibilities": "Built a full-stack meeting scheduling platform end-to-end, enabling users to find the most available time slots across participants.",
     "technologies": [
       {
         "name": "Python",
@@ -65,7 +65,7 @@
         "Order manager"
       ],
       "link": "https://www.checkpoint.com/",
-      "responsibilities": "In charge of integration of purchase orders into company system guidelines and shipment protocols.",
+      "responsibilities": "Managed the integration of purchase orders into company systems, ensuring compliance with internal guidelines and shipment protocols.",
       "technologies": []
     }
 ]
