@@ -1,7 +1,31 @@
 [
+      {
+        "title": "Queems",
+        "description": "A companion app for LinkedIn’s ‘Queens’ puzzle. Track your scores, revisit completed puzzles, and beat your best times, built with an agentic workflow using MCP, spec-kit, and AI agents.",
+        "image":"/assets/images/Projects/Queems.png",
+        "githubLink":"https://queems.netlify.app/",
+        "technologies": [
+          {
+            "name": "React",
+            "logo": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+          },
+          {
+            "name": "tailwindcss",
+            "logo": null
+          },
+          {
+            "name": "spec-driven-development",
+            "logo": null
+          },
+          {
+            "name": "spec-kit",
+            "logo": null
+          }
+        ]
+    },
     {
         "title": "Enigma Machine",
-        "description": "Developed a client-server desktop application using Tomcat and implemented the Enigma machine. Created a contest where clients compete to decrypt encoded messages. Leveraged Java for server-side logic and JavaFX for intuitive client apps",
+        "description": "A client-server desktop app recreating the historical Enigma cipher machine, featuring a real-time competitive platform where clients race to decrypt encoded messages.",
         "image":"/assets/images/Projects/Enigma.jpg",
         "githubLink":"https://github.com/RonHachmon/Enigma-Machine",
         "technologies": [
@@ -21,7 +45,7 @@
     },
     {
       "title": "Cut it Out",
-      "description": "A web application that uses an AI model to separate the image's main subject from its background, the app utilizes Docker AWS and GitHub actions to automate the deployment process.",
+      "description": "A web app powered by an AI background removal model, with a full CI/CD pipeline using GitHub Actions, Docker, and AWS for automated containerized deployments.",
       "image":"/assets/images/Projects/Cut it Out.jpg",
       "githubLink":"https://github.com/RonHachmon/Cut-it-Out",
       "technologies": [
@@ -49,7 +73,7 @@
   },
     {
       "title": "Desktop Facebook",
-      "description": "Designed and developed a Facebook desktop application by utilizing the Facebook API. The main focus was to implement various design patterns, including Singleton, Strategy, Adapter, Iterator, and more, in order to enhance the application's architecture and functionality.",
+      "description": "A Facebook desktop client in C# integrating the Graph API, applying OOP design patterns including Singleton, Strategy, Adapter, and Iterator for a clean, modular architecture.",
       "image":"/assets/images/Projects/facebook.jpg",
       "githubLink":"https://github.com/RonHachmon/Facebook-desktop-app",
       "technologies": [
@@ -65,7 +89,7 @@
   },
     {
         "title": "Bull Detection",
-        "description": "This project showcases the use of transfer learning to train an SSD (Single Shot Detector) model for detecting bulls in images.",
+        "description": "Fine-tuned an SSD object detection model using transfer learning and PyTorch to accurately detect and localize bulls in real-world images.",
         "image":"/assets/images/Projects/Bulls project.jpg",
         "githubLink":"https://github.com/RonHachmon/Transfer-Learing-SSD-model",
         "technologies": [
