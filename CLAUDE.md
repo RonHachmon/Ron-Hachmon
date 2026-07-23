@@ -25,6 +25,9 @@ All portfolio content lives in `app/json/`:
 
 To modify portfolio content, edit these JSON files directly.
 
+The About prose lives in `app/content/about.md` as plain text, rendered by `components/utils/rich-text.jsx`:
+`**text**` = brightest, `*text*` = light highlight, `# ` line prefix = large lead paragraph, blank line = new paragraph, single newline = line break.
+
 ### Component Structure
 - **Server Components** (async): `ProfileCard.jsx`, `About.jsx` - fetch data at build time
 - **Client Components** ("use client"): `Navigation.jsx`, `Spotlight.jsx`, `Analytics.jsx` - require browser APIs

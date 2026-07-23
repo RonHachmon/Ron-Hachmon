@@ -42,7 +42,7 @@ export default async function Home()
           </section>
 
 
-          <section className="mt-10 space-y-8 "  id="experience-ID">
+          <section className="mt-10 space-y-8 scroll-mt-20"  id="experience-ID">
             <h2 className="mobile-nav z-40">experience</h2>
             {experiences?.map((experience, index) => (
                         <Experience key={index} id={index} experience={experience}/>
@@ -50,7 +50,7 @@ export default async function Home()
             ))}
           </section>
 
-          <section className="mt-10 space-y-8 lg:mb-20 mb-8  " id="project-ID">
+          <section className="mt-10 space-y-8 lg:mb-20 mb-8 scroll-mt-20" id="project-ID">
               <h2 className="mobile-nav z-40">projects</h2>
               {projects?.map((project, index) => (
                           <Project key={index} id={index} project={project}/>

@@ -1,165 +1,125 @@
 "use client"
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+const SECTIONS = ['about-ID', 'experience-ID', 'project-ID'];
+const LABELS = {
+  'about-ID': 'ABOUT',
+  'experience-ID': 'EXPERIENCE',
+  'project-ID': 'PROJECT',
+};
 
 const Navigation = () => {
-  const RANGE_FROM_MIDDLE=200
-  const lineDisabled="w-6 mr-5"
-  const lineEnabled="w-20 mr-0 bg-teal-300"
-  const textDisabled=""
-  const textEnabled="text-teal-300 pl-2"
-  const [aboutEnabled, setAboutEnabled] = useState(true);
-  const [projectEnabled, setProjectEnabled] = useState(false);
-  const [experienceEnabled, setExperienceEnabled] = useState(false);
+  const lineDisabled = "w-6 mr-5"
+  const lineEnabled = "w-20 mr-0 bg-teal-300"
+  const textDisabled = ""
+  const textEnabled = "text-teal-300 pl-2"
+  const [activeSection, setActiveSection] = useState(SECTIONS[0]);
+  // Raised while a click-driven smooth scroll is running, so the scroll spy
+  // cannot overwrite the section the user just picked.
+  const scrollLock = useRef(false);
+  const unlockTimeout = useRef(null);
+
   useEffect(() => {
+    const mainPage = document.getElementById('main-page');
+    if (!mainPage) {
+      return;
+    }
+
+    let frame = null;
+
+    const syncActiveSection = () => {
+      frame = null;
+      if (scrollLock.current) {
+        return;
+      }
+      // Bottom of the scroll container: the last section can never reach the
+      // threshold line, so pin it explicitly.
+      if (mainPage.scrollTop + mainPage.clientHeight >= mainPage.scrollHeight - 2) {
+        setActiveSection(SECTIONS[SECTIONS.length - 1]);
+        return;
+      }
+      const line = mainPage.getBoundingClientRect().top + window.innerHeight * 0.30;
+      let current = SECTIONS[0];
+      for (const id of SECTIONS) {
+        const element = document.getElementById(id);
+        if (element && element.getBoundingClientRect().top <= line) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
     const handleScroll = () => {
-      if(elementVisibile('about-ID'))
-      {
-        setAboutActive()
-        return;
-      }
-      if(elementCloseToTop('experience-ID'))
-      {
-        setExperienceActive()
-        return;
-      }
-      if(elementCloseToTop('project-ID'))
-      {
-        setProjectActive()
-        return;
+      if (frame === null) {
+        frame = requestAnimationFrame(syncActiveSection);
       }
     };
-    const mainPage = document.getElementById('main-page');    
-    if(mainPage)
-    {
-      mainPage.addEventListener('scroll', handleScroll);
-    }
-  
+
+    const releaseLock = () => {
+      scrollLock.current = false;
+    };
+
+    syncActiveSection();
+    mainPage.addEventListener('scroll', handleScroll, { passive: true });
+    mainPage.addEventListener('scrollend', releaseLock);
 
     return () => {
-      if(mainPage)
-      {
-        mainPage.removeEventListener('scroll', handleScroll);
+      mainPage.removeEventListener('scroll', handleScroll);
+      mainPage.removeEventListener('scrollend', releaseLock);
+      if (frame !== null) {
+        cancelAnimationFrame(frame);
+      }
+      if (unlockTimeout.current) {
+        clearTimeout(unlockTimeout.current);
       }
     };
   }, []);
-  const setAboutActive = () => {
-    setAboutEnabled(true)
-    setProjectEnabled(false)
-    setExperienceEnabled(false)
-  }
-  const setExperienceActive = () => {
-    setAboutEnabled(false)
-    setExperienceEnabled(true)
-    setProjectEnabled(false)
 
-  }
-  const setProjectActive = () => {
-    setAboutEnabled(false)
-    setExperienceEnabled(false)
-    setProjectEnabled(true)
-  }
-  const elementVisibile = (element) => {
-    const foundElement = document.getElementById(element);
-    if(foundElement)
-    {
-      const elementRect = foundElement.getBoundingClientRect();
-      if(elementRect.top>0)
-      {
-        return true;
-      }
+  const scrollToLink = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) {
+      return;
     }
-    return false;
-  }
-  const elementCloseToTop= (element) => {
-    const windowHeight = window.innerHeight;
-    const foundElement = document.getElementById(element);
-    if(foundElement)
-    {
-      const elementRect = foundElement.getBoundingClientRect();
-      const topThreshold = windowHeight*0.30; // Adjust this threshold as needed
-
-    
-      const elementTopPosition = elementRect.top;
-    
-      const isCloseToTop = elementTopPosition <= topThreshold;
-    
-      return isCloseToTop && elementRect.top>0;
+    scrollLock.current = true;
+    if (unlockTimeout.current) {
+      clearTimeout(unlockTimeout.current);
     }
-    return false
-  }
-  const elementCloseToMiddle = (element) => {
-    const windowHeight = window.innerHeight/2;
-    const foundElement = document.getElementById(element);
-    if(foundElement)
-    {
-      const elementRect = foundElement.getBoundingClientRect();
-      console.log(element +" "+elementRect.top +" windown middle "+ windowHeight )
-      if(elementRect.top>0 && (windowHeight-elementRect.top)<RANGE_FROM_MIDDLE)
-      {
-        return true;
-      }
-    }
+    // Fallback for browsers without 'scrollend'.
+    unlockTimeout.current = setTimeout(() => {
+      scrollLock.current = false;
+    }, 800);
 
-    return false;
-  }
+    setActiveSection(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+    window.history.replaceState(null, '', '#' + targetId);
+  };
 
-    const scrollToLink = (targetId) => {
-      const targetElement = document.getElementById(targetId);
-      if(targetElement)
-      {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-        if(targetId==='about-ID')
-        {
-          setAboutActive()
-        }
-        if(targetId==='experience-ID')
-        {
-          setExperienceActive()
-        }
-        if(targetId==='project-ID')
-        {
-          setProjectActive()
-        }
-      }
-    };
-  
+  return (
+    <nav className='lg:self-end  w-fit'>
+      <div className="flex flex-col space-y-5 pl-3 text-xs font-bold tracking-wide text-slate-400">
 
-    return (
-      <nav className='lg:self-end  w-fit'>
-      <div className="flex flex-col space-y-5 pl-3 text-xs font-bold tracking-wide text-slate-400" >
-
-      <a className="group w-fit scroll-smooth" href="#about" >
-
-        <div className=" flex flex-row items-center h-6 w-fit pr-7 text-center ">
-            <div  className={(aboutEnabled? lineEnabled:lineDisabled) + " nav-line bg-slate-400  group-hover:w-20 group-hover:bg-teal-300 group-hover:mr-0" }  onClick={()=>scrollToLink('about-ID')} ></div>
-            <div className={ (aboutEnabled? textEnabled:textDisabled)+ " group-hover:text-teal-300 group-hover:pl-2"} onClick={()=>scrollToLink('about-ID')}>ABOUT</div>
-        </div>
-
-      </a>
-
-      <a className="group w-fit " href="#experience">
-
-          <div className="flex flex-row items-center h-6 w-fit pr-7 text-center">
-          <div  className={(experienceEnabled? lineEnabled:lineDisabled) + " nav-line bg-slate-400  group-hover:w-20 group-hover:bg-teal-300 group-hover:mr-0" } onClick={()=>scrollToLink('experience-ID')} ></div>
-              <div className={ (experienceEnabled? textEnabled:textDisabled)+ " group-hover:text-teal-300 group-hover:pl-2"} onClick={()=>scrollToLink('experience-ID')}>EXPERIENCE</div>
-          </div>
-
-      </a>
-
-      <a className="group w-fit"  href="#project">
-
-        <div className="group flex flex-row items-center h-6 w-fit pr-7 text-center">
-        <div  className={(projectEnabled? lineEnabled:lineDisabled) + " nav-line bg-slate-400  group-hover:w-20 group-hover:bg-teal-300 group-hover:mr-0" } onClick={()=>scrollToLink('project-ID')} ></div>
-            <div className={ (projectEnabled? textEnabled:textDisabled)+ " group-hover:text-teal-300 group-hover:pl-2"}  onClick={()=>scrollToLink('project-ID')}>PROJECT</div>
-        </div>
-
-      </a>
+        {SECTIONS.map((id) => {
+          const isActive = activeSection === id;
+          return (
+            <a
+              key={id}
+              className="group w-fit scroll-smooth"
+              href={'#' + id}
+              onClick={(event) => scrollToLink(event, id)}
+            >
+              <div className="flex flex-row items-center h-6 w-fit pr-7 text-center">
+                <div className={(isActive ? lineEnabled : lineDisabled) + " nav-line bg-slate-400  group-hover:w-20 group-hover:bg-teal-300 group-hover:mr-0"}></div>
+                <div className={(isActive ? textEnabled : textDisabled) + " group-hover:text-teal-300 group-hover:pl-2"}>{LABELS[id]}</div>
+              </div>
+            </a>
+          );
+        })}
 
       </div>
-      </nav>
-    );
-  };
-  
-  export default Navigation;
-  
+    </nav>
+  );
+};
+
+export default Navigation;

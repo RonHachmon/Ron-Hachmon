@@ -11,7 +11,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "next": "^16.1.6",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^6.9.2",
@@ -20,5 +20,9 @@
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.1.7"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "^0.35.3"
   }
 }

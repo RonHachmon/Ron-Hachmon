@@ -1,4 +1,40 @@
 [
+        {
+          "title": "its3d",
+          "description": "Marketing and e-commerce site for a personalized 3D-printing gift business. Content is fully driven by Sanity CMS and statically prerendered for SEO, with a 3D product previewer and a serverless checkout flow that uploads reference images to Cloudinary and hands off orders via WhatsApp.",
+          "image": "/assets/images/Projects/its3d.jpg",
+          "githubLink": "https://www.its3d.shop/",
+          "technologies": [
+            {
+              "name": "Next.js",
+              "logo": "https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
+            },
+            {
+              "name": "React",
+              "logo": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+            },
+            {
+              "name": "TypeScript",
+              "logo": "https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+            },
+            {
+              "name": "Tailwind CSS",
+              "logo": "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+            },
+            {
+              "name": "Sanity",
+              "logo": "https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&logo=sanity&logoColor=white"
+            },
+            {
+              "name": "Three.js",
+              "logo": "https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white"
+            },
+            {
+              "name": "Vercel",
+              "logo": "https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
+            }
+          ]
+      },
       {
         "title": "Queems",
         "description": "A companion app for LinkedIn’s ‘Queens’ puzzle. Track your scores, revisit completed puzzles, and beat your best times, built with an agentic workflow using MCP, spec-kit, and AI agents.",
